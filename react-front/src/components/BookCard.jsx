@@ -9,7 +9,7 @@ export default function BookCard({ book }) {
                 <p>
                     {book.overview}
                 </p>
-                <Link to={`/book/${book.id}`} className='btn btn-primary'>Read More</Link>
+                <Link to={`/books/${book.id}`} className='btn btn-primary'>Read More</Link>
             </div>
         </div>
     )
