@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom"
 
-export default function BookCard() {
+export default function BookCard({ book }) {
     return (
         <div className="book card">
             <div className="card-body">
-                <h3>Book Title</h3>
-                <span className="text-muted">By <span>Author</span></span>
+                <h3>{book.title}</h3>
+                <span className="text-muted">By <span>{book.author}</span></span>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dignissimos.
+                    {book.overview}
                 </p>
-                <Link to='/books/1' className='btn btn-primary'>Read More</Link>
+                <Link to={`/book/${book.id}`} className='btn btn-primary'>Read More</Link>
             </div>
         </div>
     )
