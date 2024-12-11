@@ -15,7 +15,7 @@ function App() {
           <Route element={<AppLayout />}>
 
             <Route index element={<BooksPage />} />
-            <Route path='books/:id' element={<SingleBook />} />
+            <Route path="books/:id" element={<SingleBook />} />
 
           </Route>
 

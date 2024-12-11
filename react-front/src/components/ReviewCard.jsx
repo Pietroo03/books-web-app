@@ -7,7 +7,7 @@ export default function ReviewCard({ review }) {
                 <span>By: {review.username}</span>
 
                 <div className="vote mt-3">
-                    <strong>Vote: {review.vote}</strong>
+                    <strong>Vote: {review.vote}/5</strong>
                 </div>
             </div>
         </div>

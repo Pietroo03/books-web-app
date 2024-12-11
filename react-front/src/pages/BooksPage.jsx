@@ -1,5 +1,5 @@
-import BookCard from "../components/BookCard"
 import Banner from '../components/Banner'
+import BookCard from "../components/BookCard"
 
 export default function BooksPage() {
 
@@ -69,19 +69,19 @@ export default function BooksPage() {
     return (
         <>
 
-            <Banner title='Bool Books' subtitle='The nerdest book community' leadtext='Lorem ipsum dolor sit amet consectetur adipisicing.' />
+            <Banner title="Bool Books" subtitle="The nerdest book community" leadtext="Lorem ipsum dolor sit amet consectetur adipisicing." />
 
             <section className="py-5">
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
                         {
-                            books.map(book => {
+                            books.map(book => (
 
                                 <div className="col" key={book.id}>
                                     <BookCard book={book} />
                                 </div>
 
-                            })
+                            ))
                         }
                     </div>
                 </div>
