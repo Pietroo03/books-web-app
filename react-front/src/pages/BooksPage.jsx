@@ -69,7 +69,7 @@ export default function BooksPage() {
     return (
         <>
 
-            <Banner title={'Bool Books'} subtitle={'The nerdest book community'} leadtext={'Lorem ipsum dolor sit amet consectetur adipisicing.'} />
+            <Banner title='Bool Books' subtitle='The nerdest book community' leadtext='Lorem ipsum dolor sit amet consectetur adipisicing.' />
 
             <section className="py-5">
                 <div className="container">
