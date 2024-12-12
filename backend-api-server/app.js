@@ -1,9 +1,11 @@
 const express = require('express')
+const cors = require('cors')
 const server = express()
 const BooksRouter = require('./routes/books');
 const NotFound = require('./middlewares/NotFound')
 const ServerErrorsHandler = require('./middlewares/ServerErrorsHandler')
 
+server.use(cors({ origin: process.env.WEB_APP_FRONT_ORIGIN }))
 const HOST = process.env.HOST
 const PORT = process.env.PORT
 
