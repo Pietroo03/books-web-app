@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Banner from '../components/Banner'
 import ReviewCard from '../components/ReviewCard'
+import ReviewFormCard from '../components/ReviewFormCard'
 
 export default function SingleBook() {
 
@@ -25,6 +26,8 @@ export default function SingleBook() {
         <>
 
             <Banner title={book?.title} subtitle={`By ${book?.author}`} leadtext={book?.abstract} />
+
+            <ReviewFormCard book_id={id} />
 
             <section className='reviews'>
                 <div className="container">
