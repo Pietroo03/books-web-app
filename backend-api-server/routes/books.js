@@ -12,5 +12,6 @@ router.get('/', BookController.index);
 
 router.get('/:id', BookController.show)
 
+router.post('/:id/review', BookController.review)
 
 module.exports = router;
