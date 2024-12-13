@@ -7,6 +7,10 @@ export default function ReviewFormCard({ book_id }) {
     const [review, setReview] = useState('')
     const [rating, setRating] = useState(0)
 
+    function HandleFormToggle() {
+        document.getElementById('form-card').classList.toggle('d-none')
+    }
+
     function HandleFormSubmit(e) {
         e.preventDefault()
         console.log('here');
@@ -38,9 +42,15 @@ export default function ReviewFormCard({ book_id }) {
     return (
 
         <div className="container">
-            <div className="card">
+
+            <div className="text-center mb-3">
+                <button onClick={HandleFormToggle} className="btn btn-primary">Write a new review</button>
+            </div>
+
+            <div id="form-card" className="card mb-4 d-none">
                 <div className="card-body">
 
+                    <h3 className="text-center pb-2">Leave your review!</h3>
                     <form onSubmit={HandleFormSubmit}>
 
                         <div className="mb-3">
