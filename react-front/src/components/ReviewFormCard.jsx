@@ -21,8 +21,18 @@ export default function ReviewFormCard({ book_id }) {
 
         const base_book_api_server = `http://localhost:3000/api/books/${book_id}/review`
 
-        console.log(base_book_api_server);
-
+        fetch(base_book_api_server, {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(err => console.log(err));
     }
 
     return (

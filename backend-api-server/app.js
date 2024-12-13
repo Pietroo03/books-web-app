@@ -7,6 +7,7 @@ const ServerErrorsHandler = require('./middlewares/ServerErrorsHandler')
 
 server.use(cors({ origin: process.env.WEB_APP_FRONT_ORIGIN }))
 
+server.use(express.json())
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT
